@@ -189,6 +189,9 @@ footer h2 {
   height: calc(var(--word-size-2) * 0.75);
   background-color: #ccc;
 }
+  footer {
+    margin-top: 50px;
+}
   footer h2 {
     text-align: center;
     text-transform: capitalize;
@@ -203,4 +206,5 @@ footer h2 {
   height: 60px;
   margin: 10px;
 }
+
 }
