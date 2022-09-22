@@ -174,7 +174,7 @@ footer h2 {
 .game-container.x .game-box:not(.x):not(.o):hover::after {
   content: "";
   position: absolute;
-  width: calc(var(--word-size-2) * 0.1);
+  width: calc(var(--word-size-2) * 0.12);
   height: var(--word-size);
   background-color: black;
 }
@@ -185,8 +185,8 @@ footer h2 {
 }
   .game-box.o::after,
 .game-container.o .game-box:not(.x):not(.o):hover::after {
-  width: calc(var(--word-size-2) * 0.6);
-  height: calc(var(--word-size-2) * 0.6);
+  width: calc(var(--word-size-2) * 0.8);
+  height: calc(var(--word-size-2) * 0.8);
   background-color: #ccc;
 }
   footer h2 {
