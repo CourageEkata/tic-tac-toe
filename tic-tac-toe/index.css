@@ -5,6 +5,7 @@
 }
 :root {
   --gamebox-size: 400px;
+  --gamebox-size-2: 200px;
   --word-size: calc(var(--gamebox-size) * 0.2);
 }
 body {
@@ -158,8 +159,14 @@ footer h2 {
     margin-top: 10px;
   }
   .group-container {
-    padding: 20px;
-  }
+  max-width: 400px;
+  max-height: 400px;
+  margin: auto;
+}
+  .game-container {
+  width: var(--gamebox-size-2);
+  height: var(--gamebox-size-2);
+}
   footer h2 {
     text-align: center;
     text-transform: capitalize;
