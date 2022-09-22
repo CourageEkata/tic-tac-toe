@@ -149,3 +149,30 @@ footer h2 {
   margin: auto 30px;
   width: 45px;
 }
+
+/* media queries for mobile */
+@media screen and(max-width: 650px) {
+  .header h1 {
+    font-weight: 900;
+    margin-top: 50px;
+  }
+  .group-container {
+    max-width: 800px;
+    max-height: 800px;
+    margin: auto;
+  }
+  .game-container {
+    width: 300px;
+    height: 300px;
+    display: grid;
+  }
+  footer h2 {
+    text-align: center;
+    text-transform: capitalize;
+    margin-top: 30px;
+  }
+  .social-icons img {
+    margin: auto 20px;
+    width: 45px;
+  }
+}
