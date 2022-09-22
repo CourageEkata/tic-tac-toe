@@ -86,8 +86,8 @@ body {
 /* Making a perfect circle. The after element is the inner-part of the circle */
 .game-box.o::after,
 .game-container.o .game-box:not(.x):not(.o):hover::after {
-  width: calc(var(--word-size) * 0.7);
-  height: calc(var(--word-size) * 0.7);
+  width: calc(var(--word-size) * 0.8);
+  height: calc(var(--word-size) * 0.8);
   background-color: #ccc;
 }
 .game-container.x .game-box:not(.x):not(.o):hover::after,
