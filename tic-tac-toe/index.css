@@ -1,0 +1,151 @@
+* {
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+:root {
+  --gamebox-size: 400px;
+  --word-size: calc(var(--gamebox-size) * 0.2);
+}
+body {
+  background-color: #ccc;
+}
+.header h1 {
+  text-transform: uppercase;
+  font-weight: 800;
+  text-align: center;
+  margin-top: 50px;
+}
+.group-container {
+  max-width: 800px;
+  max-height: 800px;
+  margin: auto;
+}
+.game-container {
+  width: var(--gamebox-size);
+  height: var(--gamebox-size);
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  margin: auto;
+  border: 5px solid rgb(196, 194, 194);
+  border-radius: 15px;
+}
+
+.game-box {
+  border-radius: 10px;
+  box-shadow: -6px -6px 8px #ccc, 3px 3px 8px rgba(29, 36, 95, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  cursor: pointer;
+}
+.game-box.x,
+.game-box.o {
+  cursor: not-allowed;
+}
+
+/* design for X and also the hover effect */
+.game-box.x::before,
+.game-box.x::after,
+.game-container.x .game-box:not(.x):not(.o):hover::before,
+.game-container.x .game-box:not(.x):not(.o):hover::after {
+  content: "";
+  position: absolute;
+  width: calc(var(--word-size) * 0.15);
+  height: var(--word-size);
+  background-color: black;
+}
+.game-box.x::before,
+.game-container.x .game-box:not(.x):not(.o):hover::before {
+  transform: rotate(45deg);
+}
+.game-box.x::after,
+.game-container.x .game-box:not(.x):not(.o):hover::after {
+  transform: rotate(-45deg);
+}
+
+/* design for O and the hover effect */
+.game-box.o::before,
+.game-box.o::after,
+.game-container.o .game-box:not(.x):not(.o):hover::before,
+.game-container.o .game-box:not(.x):not(.o):hover::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  background-color: black;
+}
+/* Making a perfect circle. The before element is the rim of the circle */
+.game-box.o::before,
+.game-container.o .game-box:not(.x):not(.o):hover::before {
+  width: var(--word-size);
+  height: var(--word-size);
+}
+/* Making a perfect circle. The after element is the inner-part of the circle */
+.game-box.o::after,
+.game-container.o .game-box:not(.x):not(.o):hover::after {
+  width: calc(var(--word-size) * 0.7);
+  height: calc(var(--word-size) * 0.7);
+  background-color: #ccc;
+}
+.game-container.x .game-box:not(.x):not(.o):hover::after,
+.game-container.x .game-box:not(.x):not(.o):hover::before,
+.game-container.o .game-box:not(.x):not(.o):hover::before {
+  background-color: rgb(189, 180, 180);
+}
+
+.restart-game {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #ccc;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+#restartbtn {
+  background-color: black;
+  color: #ccc;
+  width: auto;
+  height: 50px;
+  margin: 10px;
+  text-transform: uppercase;
+  font-size: 20px;
+  font-weight: 600;
+  border-radius: 5px;
+  box-shadow: -1px -1px 5px rgb(146, 138, 138), 1px 6px 8px rgba(2, 5, 31, 0.5);
+}
+#restartbtn:hover {
+  transform: scale(1.1);
+}
+.winning-message {
+  font-size: 40px;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+.restart-game.show {
+  display: flex;
+}
+
+footer h2 {
+  text-align: center;
+  text-transform: capitalize;
+  margin-top: 30px;
+}
+.my-name img {
+  width: 22px;
+}
+.social-icons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.social-icons img {
+  margin: auto 30px;
+  width: 45px;
+}
