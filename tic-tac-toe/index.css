@@ -156,7 +156,7 @@ footer h2 {
 /* media queries for mobile */
 @media screen and (max-width: 700px) {
   .header h1 {
-    font-size: 60px;
+    font-size: 50px;
     margin-top: 10px;
   }
   .group-container {
@@ -208,3 +208,4 @@ footer h2 {
 }
 
 }
+
