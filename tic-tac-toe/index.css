@@ -163,11 +163,6 @@ footer h2 {
     margin: auto;
     padding: 20px;
   }
-  .game-container {
-    width: auto;
-    height: auto;
-    display: grid;
-  }
   footer h2 {
     text-align: center;
     text-transform: uppercase;
