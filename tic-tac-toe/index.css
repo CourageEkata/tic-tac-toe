@@ -5,8 +5,9 @@
 }
 :root {
   --gamebox-size: 400px;
-  --gamebox-size-2: 200px;
+  --gamebox-size-2: 300px;
   --word-size: calc(var(--gamebox-size) * 0.2);
+   --word-size-2: calc(var(--gamebox-size) * 0.2);
 }
 body {
   background-color: #ccc;
@@ -166,6 +167,27 @@ footer h2 {
   .game-container {
   width: var(--gamebox-size-2);
   height: var(--gamebox-size-2);
+}
+  .game-box.x::before,
+.game-box.x::after,
+.game-container.x .game-box:not(.x):not(.o):hover::before,
+.game-container.x .game-box:not(.x):not(.o):hover::after {
+  content: "";
+  position: absolute;
+  width: calc(var(--word-size-2) * 0.15);
+  height: var(--word-size);
+  background-color: black;
+}
+  .game-box.o::before,
+.game-container.o .game-box:not(.x):not(.o):hover::before {
+  width: var(--word-size-2);
+  height: var(--word-size-2);
+}
+  .game-box.o::after,
+.game-container.o .game-box:not(.x):not(.o):hover::after {
+  width: calc(var(--word-size-2) * 0.7);
+  height: calc(var(--word-size-2) * 0.7);
+  background-color: #ccc;
 }
   footer h2 {
     text-align: center;
