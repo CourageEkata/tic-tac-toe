@@ -158,14 +158,11 @@ footer h2 {
     margin-top: 10px;
   }
   .group-container {
-    max-width: 800px;
-    max-height: 800px;
-    margin: auto;
     padding: 20px;
   }
   footer h2 {
     text-align: center;
-    text-transform: uppercase;
+    text-transform: capitalize;
     margin-top: 30px;
   }
   .social-icons img {
