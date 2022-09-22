@@ -165,6 +165,7 @@ footer h2 {
     width: 300px;
     height: 300px;
     display: grid;
+    padding: 20px;
   }
   footer h2 {
     text-align: center;
