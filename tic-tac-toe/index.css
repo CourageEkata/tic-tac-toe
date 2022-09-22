@@ -191,6 +191,7 @@ footer h2 {
 }
   footer {
     margin-top: 50px;
+    height: auto;
 }
   footer h2 {
     text-align: center;
